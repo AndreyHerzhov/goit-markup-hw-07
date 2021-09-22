@@ -11,6 +11,8 @@ address {
   font-style: normal;
 }
 
+/*MAIN_RESET*/
+
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -31,6 +33,18 @@ li {
 
 img {
   display: block;
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+}
+
+.link {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -93,7 +107,6 @@ img {
   position: absolute;
   display: inline-flex;
   justify-content: center;
-
   margin: 0 auto;
   background: #ffffff;
   border: 1px solid #000000;
@@ -110,11 +123,28 @@ img {
   visibility: visible;
 }
 
-.modal-form {
+.button-kreuz {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  right: 8px;
+  top: 8px;
+}
+
+.button-kreuz:hover {
+  fill: #2196f3;
+  cursor: pointer;
+}
+
+.modal__form {
   padding-top: 40px;
 }
 
-.modal-title {
+.modal__title {
   display: block;
   margin-bottom: 12px;
   font-family: Roboto;
@@ -126,7 +156,12 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
-.modal-form-label {
+
+.modal__field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.modal__label {
   display: block;
   font-family: Roboto;
   font-style: normal;
@@ -139,7 +174,11 @@ img {
   margin-bottom: 4px;
 }
 
-.modal-form-input {
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap__input {
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -149,11 +188,11 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:hover {
+.input-wrap__input:hover {
   cursor: pointer;
 }
 
-.modal-form-icon {
+.input-wrap__icon {
   fill: #000000;
   position: absolute;
   top: 50%;
@@ -162,21 +201,18 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-wrap {
-  position: relative;
-}
-.modal-form-field:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.modal-form-input:focus,
-.modal-form-input:focus + .modal-form-icon {
+.input-wrap__input:focus + .input-wrap__icon {
   border-color: #188ce8;
   outline: none;
   fill: #188ce8;
 }
 
-.modal-comment {
+.input-wrap__input:focus {
+  outline: none;
+  border-color: #188ce8;
+}
+
+.modal__comment {
   resize: none;
   width: 448px;
   height: 120px;
@@ -185,12 +221,12 @@ img {
   padding: 16px 12px;
 }
 
-.modal-comment:focus {
+.modal__comment:focus {
   border-color: #188ce8;
   outline: none;
 }
 
-.modal-comment::placeholder {
+.modal__comment::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -200,20 +236,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.check-label {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-text {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: #757575;
-  margin-right: 3px;
-}
-
-.modal-form-field-checkbox {
+.modal__field--checkbox {
   padding-left: 12px;
   margin-top: 20px;
 }
@@ -221,13 +244,17 @@ img {
 .check-label > a {
   font-size: 14px;
   line-height: 1.7;
-  /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196f3;
 }
 
-.icon-check {
+.check-label {
+  display: flex;
+  align-items: center;
+}
+
+.check-label__icon {
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
@@ -238,7 +265,15 @@ img {
   justify-content: center;
 }
 
-.checkbox:checked + .check-label > .icon-check {
+.check-label__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-right: 3px;
+}
+
+.modal__checkbox:checked + .check-label > .icon-check {
   background: #2196f3;
   border: transparent;
 }
@@ -248,11 +283,7 @@ img {
   justify-content: center;
 }
 
-.form-btn:hover {
-  cursor: pointer;
-}
-
-.form-btn {
+.button-wrap__form {
   width: 200px;
   height: 50px;
   border: none;
@@ -278,35 +309,8 @@ img {
   border-radius: 4px;
 }
 
-.button-kreuz:hover {
-  fill: #2196f3;
+.button-wrap__form:hover {
   cursor: pointer;
-}
-
-.button-kreuz {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  right: 8px;
-  top: 8px;
-}
-
-/*MAIN_RESET*/
-
-.list {
-  list-style: none;
-  text-decoration: none;
-}
-
-.link {
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* HEADER */
@@ -968,6 +972,8 @@ img {
   border-radius: 4px;
   color: #ffffff;
 }
+
+/*CARDS*/
 
 .cards-list {
   display: flex;
