@@ -7,6 +7,17 @@
   --hover-button-text: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 h1,
 h2,
 h3,
@@ -45,17 +56,6 @@ ul {
   text-decoration: none;
   margin: 0;
   padding: 0;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
 }
 
 .container {
@@ -128,55 +128,6 @@ ul {
 
 .contacts-list__link:hover .contacts-list__icon {
   fill: #188ce8;
-}
-
-.current {
-  color: #2196f3;
-}
-
-.current::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  left: 0px;
-  bottom: -1px;
-  border-radius: 2px;
-}
-
-.social {
-  margin-top: 16px;
-  display: flex;
-}
-
-.social__icon {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: #ffffff;
-}
-
-.social__link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social__link:hover, .social__link:focus {
-  background-color: #188ce8;
-}
-
-.social__link .social__item:not(:first-child) {
-  margin-left: 10px;
 }
 
 .site-nav {
@@ -1014,5 +965,54 @@ ul {
 
 .button-wrap__form:hover {
   cursor: pointer;
+}
+
+.current {
+  color: #2196f3;
+}
+
+.current::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  left: 0px;
+  bottom: -1px;
+  border-radius: 2px;
+}
+
+.social {
+  margin-top: 16px;
+  display: flex;
+}
+
+.social__icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: #ffffff;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover, .social__link:focus {
+  background-color: #188ce8;
+}
+
+.social__link .social__item:not(:first-child) {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */

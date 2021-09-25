@@ -1,11 +1,9 @@
 @import "./utils/vars";
-@import "./base/reset";
 @import "./utils/hidden";
+@import "./base/reset";
 @import "./base/container";
 @import "./layout/header";
 @import "./layout/contacts";
-@import "./components/current";
-@import "./components/social";
 @import "./layout/site-nav";
 @import "./layout/hero";
 @import "./layout/main";
@@ -20,3 +18,5 @@
 @import "./layout/portfolio-buttons";
 @import "./layout/portfolio-cards";
 @import "./layout/modal";
+@import "./components/current";
+@import "./components/social";
