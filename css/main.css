@@ -316,6 +316,7 @@ ul {
 .command {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: #f5f4fa;
 }
 
 .command__list {
@@ -1012,7 +1013,7 @@ ul {
   background-color: #188ce8;
 }
 
-.social__link .social__item:not(:first-child) {
+.social__item:not(:first-child) {
   margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */
